@@ -1,0 +1,50 @@
+Arguments: 
+  /usr/bin/node /usr/share/yarn/bin/yarn.js dev
+
+PATH: 
+  /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/adinugroho/Android/Sdk/emulator:/home/adinugroho/Android/Sdk/tools:/home/adinugroho/Android/Sdk/tools/bin:/home/adinugroho/Android/Sdk/platform-tools:/usr/local/go/bin:/home/adinugroho/Android/Sdk/emulator:/home/adinugroho/Android/Sdk/tools:/home/adinugroho/Android/Sdk/tools/bin:/home/adinugroho/Android/Sdk/platform-tools:/usr/local/go/bin:/home/adinugroho/Android/Sdk/emulator:/home/adinugroho/Android/Sdk/tools:/home/adinugroho/Android/Sdk/tools/bin:/home/adinugroho/Android/Sdk/platform-tools:/usr/local/go/bin
+
+Yarn version: 
+  1.22.5
+
+Node version: 
+  10.19.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  SyntaxError: /home/adinugroho/Tugas/JavascriptJava/Project/node-user-auth/package.json: Unexpected token / in JSON at position 139
+      at JSON.parse (<anonymous>)
+      at /usr/share/yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/usr/share/yarn/lib/cli.js:310:30)
+      at /usr/share/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "user-auth",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "start": "nodemon app.js"
+      // "dev": "nodemon app.js"
+    },
+    "author": "SutantoAdiNugroho",
+    "license": "ISC",
+    "dependencies": {
+      "bcrypt": "^5.0.1",
+      "dotenv": "^8.2.0",
+      "express": "^4.17.1",
+      "express-jwt": "^6.0.0",
+      "mongoose": "^5.12.2",
+      "nodemon": "^2.0.7"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
