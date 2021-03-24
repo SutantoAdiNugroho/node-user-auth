@@ -14,6 +14,7 @@ module.exports = {
     const hashPass = await hashPassword(req.body.password);
 
     try {
+      //Registrasi user
       const resRegister = await User.create({
         ...req.body,
         password: hashPass,
@@ -21,6 +22,7 @@ module.exports = {
 
       const { _id, name, email } = resRegister;
 
+      //Jika berhasil, outputkan user dengan id, name dan email
       res.status(201).json({
         status: 201,
         message: `User succesfully created with id ${resRegister._id}`,
@@ -34,12 +36,15 @@ module.exports = {
   loginUser: async (req, res) => {
     try {
       await User.findOne({ email: req.body.email }).then(async (userData) => {
+        
+        //Check user dengan parameter email tersebut apakah ada
         if (!userData)
           return res.status(404).json({
             status: 404,
             message: `User with email ${req.body.email} not found`,
           });
 
+        //Check enkripsi password dengan parameter password
         const compared = await comparedPassword(
           req.body.password,
           userData.password
@@ -51,6 +56,7 @@ module.exports = {
             message: "The password that entered was incorrect",
           });
 
+        //Jika berhasil, return token JWT
         const tokenLogin = await generateToken(userData);
 
         return res.status(200).json({
