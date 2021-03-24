@@ -15,9 +15,18 @@ $ git clone https://github.com/SutantoAdiNugroho/node-user-auth.git
 $ npm install
 ```
 #### 3. Ensure that your MongoDB is running locally
-Windows : running C:\mongodb\bin\mongod.exe in the Command Prompt
+For example we will running on Linux
 
-Linux   : sudo service mongod start
+Start :
+
+```
+$ sudo service mongod start
+```
+
+See the status :
+```
+$ sudo systemctl status mongod
+```
 
 #### 4. Launch the apps
 ```
