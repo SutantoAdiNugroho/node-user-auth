@@ -32,3 +32,20 @@ $ sudo systemctl status mongod
 ```
 $ npm run dev
 ```
+
+### Documentation API
+
+#### /api/auth
+
+| Path            | Method | Description   |
+| :---            | :---:  | :---          |
+| /users/login    | POST   | User login    |
+| /users/register | POST   | User register |
+
+#### /api/profile
+
+| Path              | Method | Description                            |
+| :---              | :---:  | :---                                   |
+| /users            | GET    | Show all user that has been registered |
+| /user/:id         | GET    | Show one specific user by id           |
+| /modify/user/:id  | PUT    | Edit one specific user                 |
