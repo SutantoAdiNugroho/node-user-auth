@@ -10,6 +10,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 app.use("/", require("./routes"));
+app.use("/api/auth", require("./routes/users-auth"));
 
 //App akan berjalan pada port yang telah diatur di .env
 if (connectDB) {

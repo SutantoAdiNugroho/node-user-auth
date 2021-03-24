@@ -34,6 +34,6 @@ const usersAcctSchema = new Schema({
   },
 });
 
-const UsersModel = mongoose.model("users_accts", usersAcctSchema);
+const UsersModel = mongoose.model("users_bio", usersAcctSchema);
 
 module.exports = UsersModel;
