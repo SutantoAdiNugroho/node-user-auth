@@ -1,12 +1,19 @@
 language: node_js
 node_js:
-  - "10"
+- '10'
 sudo: false
-
-branches: 
+install:
+- npm install
+script:
+- npm run test
+branches:
   only:
   - master
-
 cache:
   directories:
-    - node_modules
+  - node_modules
+deploy:
+  provider: heroku
+  api_key:
+    secure: gHU8mC3fK//bJH/wRTzoEp0KJV6TEXmG43EZMut825wmlckpel8QbSgmSD7JCBXTBjsPOQosJPOnK3tjLrDgs+gWxid/4Wp/87T00QWAdQsoHjJnzvJoWDiIhxgxFPAxoEGvoRtUhPkvxHPvq1jCEVsp1qr0w1pTxop1IWMi8ISZ314wvkJJmu/o0eY6ssSIAcrBkcogi0Qk5N3HymX/ZMBrLYiw2jSbQMjf1/zNqZNO9YKHBFD+H7exfPz2qRSXVAvFzhGMPspdsVu3JSp+itwQtQ0AYnXpiKhZRiGXanWrWdmYuy29wz+Atr8VqvgqA5sHfhRZxwpqcHfsZlqTXhazAxTA0K+zdfxw/KzZQjau88KSJVwFcF+e5vVlAt8gZ6R+3BR6Ju0+44etN6v+eT2QT4cen43zUDCeozjTt8FkvJqI5fNgXAo/dVTmLkpVxQyvyWvSwoeul9WeALOjXuxkQtS36vErhrUrjvBOmbX0Gsz2Yf+sLUOoy2QzuLQCYzsRBLgYkuNPvJ5uI/Zy5bHzVc/C1OOPJvHaDnWRJgyZEFzRXS6Bq+HZLf8a2XYFfa4Iy57+CBwe3IS36b/j1OMTXP+q9WifndZHaIfblSBD0MwBKRojNkn8ZuGVLPoUOHrynkZHSGR+zL9MsrKdbhe3+nQubjmZtV/qbp18o8s=
+  app: node-user-auth

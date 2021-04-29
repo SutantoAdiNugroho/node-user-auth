@@ -51,7 +51,7 @@ app.use("/api/profile", require("./routes/users-biodata"));
 
 //App akan berjalan pada port yang telah diatur di .env
 if (connectDB) {
-  app.listen(PORT, () => {
+  module.exports = app.listen(PORT, () => {
     console.log(`This app running on port ${PORT}`);
   });
 }
