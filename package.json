@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js",
-    "test": "jest --testEnvironment=node --verbose --forceExit --watchAll --maxWorkers=1",
+    "test": "jest --testEnvironment=node --verbose --verbose --runInBand -- routes.test.js",
     "jest": {
       "testEnvironment": "node",
       "coveragePathIgnorePatterns": ["/node_modules/"]

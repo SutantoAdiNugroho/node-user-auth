@@ -1,4 +1,5 @@
 const request = require("supertest");
+const mongoose = require("mongoose");
 const app = require("../app");
 
 describe("Get route", () => {
@@ -6,9 +7,10 @@ describe("Get route", () => {
     const res = await request(app).get("/")
     expect(res.statusCode).toEqual(200)
     done()
-  })
-})
+  });
+});
 
 afterAll(async () => {
-  await app.close()
+  await mongoose.connection.close();
+  app.close();
 });
