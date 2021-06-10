@@ -48,6 +48,7 @@ app.use((err, req, res, next) => {
 app.use("/", require("./routes"));
 app.use("/api/auth", require("./routes/users-auth"));
 app.use("/api/profile", require("./routes/users-biodata"));
+app.use("/api/personal", require("./routes/suggestion"));
 
 //App akan berjalan pada port yang telah diatur di .env
 if (connectDB) {
