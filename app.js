@@ -1,10 +1,12 @@
 const express = require("express");
 const jwt = require("express-jwt");
+const cors = require("cors");
 const bodyParser = require("body-parser");
 const { PORT, connectDB, JWT_SECRET_KEY } = require("./config");
 
 const app = express();
 
+app.use(cors());
 //Handling HTTP requests
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());

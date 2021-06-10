@@ -7,8 +7,6 @@ module.exports = {
         ...req.body,
       });
 
-      console.log(req.body);
-
       res.status(201).json({
         status: 201,
         message: `Suggestion succesfully created with id ${resRegister._id}`,
